@@ -1,39 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <title>restaurent webpage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishi Kellampalli's Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom styles here */
+    /* For example: */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .jumbotron {
+      background-image: url('background-image.jpg');
+      background-size: cover;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    
-    <div class="banner">
-        <div class="navbar">
-            <img src="data:image/png;base64,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" alt="logo" class="logo">
-            <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">about us</a></li>
-                <li><a href="">our menu</a></li>
-                <li><a href="">contact us</a></li>
-            
-            </ul>
-        </div>
-        <div class="content">
-            <h1>visit our restaurant</h1>
-            <p>to taste delicious food</p>
 
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Rishi Kellampalli</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-        <div class="button">
-            <a href="https://www.zomato.com/hyderabad">
-                <button>order food</button>
-            </a>
-            <button type="button">our location</button>
+      </div>
+    </nav>
+  </header>
 
-        </div>
-
+  <section id="about" class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+      <h1 class="display-4">About Me</h1>
+      <p class="lead"> I am a passionate web developer with experience in HTML, CSS, JavaScript, and various web technologies. I love to create responsive and user-friendly web applications.</p>
     </div>
-    
-</body>
-</html>
+  </section>
+
+  <section id="skills" class="container">
+    <h2 class="text-center mb-4">Skills</h2>
+    <p> I am a passionate web developer with experience in HTML, CSS, JavaScript, and various web technologies. I love to create responsive and user-friendly web applications.p>
+  </section>
+
+  <section id="portfolio" class="container">
+    <h2 class="text-center mb-4">Portfolio</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="project1.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description of project 1.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="project2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">Description of project 2.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="project3.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project 3</h5>
+            <p class="card-text">Description of project 3.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https
